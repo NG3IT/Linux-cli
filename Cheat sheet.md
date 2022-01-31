@@ -1,3 +1,10 @@
+# Summary
+
+[Administration (CPU, disk usage, memory, ...)](https://github.com/NG3IT/Linux-cli/blob/main/Cheat%20sheet.md#linux-administration-cpu-disk-usage-memory-)
+[Packages manipulation (Install, update, ...)[]
+
+---
+
 # Linux administration (CPU, disk usage, memory, ...)
 
 ## Disk usage
@@ -74,4 +81,14 @@ $ curl <url>
 # -I -> get headers
 # -b -> cookies specification
 # -X -> use specific method (GET/POST/TRACE/OPTIONS)
+```
+
+---
+
+# Packages manipulation (Install, update, ...)
+
+## apt
+
+```bash
+
 ```
