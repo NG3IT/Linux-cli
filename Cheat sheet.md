@@ -1,7 +1,8 @@
 # Summary
 
 [Administration (CPU, disk usage, memory, ...)](https://github.com/NG3IT/Linux-cli/blob/main/Cheat%20sheet.md#linux-administration-cpu-disk-usage-memory-)
-[Packages manipulation (Install, update, ...)[]
+
+[Packages manipulation (Install, update, ...)](https://github.com/NG3IT/Linux-cli/blob/main/Cheat%20sheet.md#packages-manipulation-install-update-)
 
 ---
 
@@ -90,5 +91,6 @@ $ curl <url>
 ## apt
 
 ```bash
-
+# OS update
+$ sudo apt -y full-update
 ```
