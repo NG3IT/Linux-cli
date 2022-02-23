@@ -67,11 +67,30 @@ Requests RPM DB :
 $ rpm -qi
 # List all packages installed
 $ rpm -qa
-# List all packages installed
-$ rpm -qa
+# List files installed
+$ rpm -ql
+# Find package who contains pattern
+$ rpm -qp <pattern>
+# Example
+$ rpm -qilp <package_name>.rpm
 ```
 
-Kernel update :
+Package verification
+
+```bash
+# Run verification
+$ rpm -V <name>
+$ rpm -V php
+```
+
+Extract package content
+
+```bash
+$ rpm2cpio <package_name>.rpm > <name>.cpio
+$ file <name>.cpio
+```
+
+Kernel update
 
 ```bash
 # 1. New kernel instalation
