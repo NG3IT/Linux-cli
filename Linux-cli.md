@@ -19,7 +19,7 @@
             6. [Updates]()
         7. [Kernel update]()
 3. [Debian/Ubuntu]()
-    1. [DPKG]()
+    1. [dpkg]()
 
 ---
 
