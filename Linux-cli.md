@@ -217,6 +217,10 @@ $ yumdownloader php
 
 # Debian/Ubuntu
 
+## Patch managment
+
+#### dpkg
+
 dpkg database is here : ```/var/lib/dpkg``` **(do not interracte directly with this db)**
 
 Naming rule : ```name-version-edition.arch.dpkg```
@@ -246,3 +250,44 @@ $ dpkg -P php
 $ dpkg --force-all --purge <package_name>.dpkg
 $ dpkg --force-all --purge php.dpkg
 ```
+
+#### Requests dpkg
+
+```bash
+# List all known packages by system
+$ dpkg -l
+$ dpkg -l "php*"
+
+# List all packages installed
+$ COLUMNS=160 dpkg -l | grep ^ii | awk '{print $2}'
+$ dpkg --get-selections
+
+# Find package with file
+$ dpkg -S <full_path_file>
+$ dpkg -S /usr/bin/basename
+
+# List content of package
+$ dpkg -L <package_name> | grep <pattern>
+$ dpkg -L coreutils | grep bin
+```
+
+#### Convert RPM package to dpkg
+
+```bash
+$ alien -d <rpm_name>.rpm
+$ alien --scripts -d <rpm_name>.rpm
+# Example
+$ alien -d lgtoclnt-7.4-1.i686.rpm
+```
+
+#### Installed Package configuration/reconfiguration
+
+```bash
+$ debconf-show <package_name>
+$ dpkg-reconfigure <package_name>
+```
+
+#### APT
+
+File repos configuration ```/etc/apt/sources.list``` and ```/etc/apt/sources.list.d```
+
