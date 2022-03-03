@@ -3,7 +3,7 @@
 ## Summary
 
 1. [Help](https://github.com/NG3IT/Linux-cli/edit/main/Linux-cli.md#help)
-2. RHEL/CentOS/OPENSuse
+2. RHEL/CentOS/OPENSuse()
     1. [Package Managment](https://github.com/NG3IT/Linux-cli/edit/main/Linux-cli.md#package-managment)
         1. [RPM]()
         2. [Requests RPM DB]()
@@ -19,7 +19,8 @@
             6. [Updates]()
         7. [Kernel update]()
 3. [Debian/Ubuntu]()
-    1. [dpkg]()
+    1. [Package Managment](https://github.com/NG3IT/Linux-cli/edit/main/Linux-cli.md#package-managment)
+        1. [dpkg]()
 
 ---
 
@@ -291,3 +292,23 @@ $ dpkg-reconfigure <package_name>
 
 File repos configuration ```/etc/apt/sources.list``` and ```/etc/apt/sources.list.d```
 
+```bash
+# List active repos
+$ cat /etc/apt/sources.list |egrep -v "^(#|$)"
+```
+
+#### Create repo
+
+```bash
+$ 
+```
+
+#### Repo usage
+
+```bash
+# Upgrade packages
+$ sudo apt -y upgrade
+
+# Upgrade distribution
+$ sudo apt -y dist-upgrade
+```
