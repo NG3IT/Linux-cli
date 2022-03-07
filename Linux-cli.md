@@ -118,7 +118,7 @@ $ file <name>.cpio
 # gpgcheck=0 (if gpgcheck desiabled is necessary)
 ```
 
-#### Repo usage
+#### yum : repo usage
 
 ##### Metadata cache
 
@@ -193,6 +193,60 @@ $ yum --exclude=<pattern> upgrade
 $ yum --exclude=kernel\* upgrade
 ```
 
+#### zypper : repo usage
+
+##### Repo manipulaton
+
+The configuration directories are on -> /etc/zypp/repos.d 
+
+```bash
+# Print active repos in priority order
+$ zypper lr -E
+# Scan, add and automatic refresh repo
+$ zypper addrepo -c -f -n <repo_name> <url>
+$ zypper addrepo -c -f -n "Mozilla-repo" http://[...]
+# Delete repo
+$ zypper removerepo <repo_name>
+# Modify repo
+$ zypper mr <repo_name>
+# Update package db
+$ zypper clean
+$ zypper refresh
+```
+
+##### Search and install package
+
+```bash
+# Search
+$ zypper se <pattern>
+$ zypper se screen
+# Install
+$ zypper in <pattern>
+$ zypper in screen
+```
+
+##### Delete package
+
+```bash
+$ zypper rm -y <pattern>
+$ zypper rm -y screen
+```
+
+##### Update packages
+
+```bash
+# Update packages with origin repo
+$ zypper update
+# Update packages with newer version, also in other repos
+$ zypper dup 
+```
+
+##### Delete package
+
+```bash
+$ 
+``` 
+
 ##### Kernel update
 
 ```bash
@@ -205,7 +259,7 @@ $ rpm -e <old_kernel>
 # 4.2. Grub2 modification : execute command 'grub2-mkconfig' for generate new /boot/grub2/grub.cfg file
 ```
 
- ##### Download package without install it
+ ##### Download package without install
 
 ```bash
 # The yumdownloader tool is in yum-utils package. You need to install it before
@@ -297,18 +351,61 @@ File repos configuration ```/etc/apt/sources.list``` and ```/etc/apt/sources.lis
 $ cat /etc/apt/sources.list |egrep -v "^(#|$)"
 ```
 
-#### Create repo
+##### Create repo
 
 ```bash
 $ 
 ```
 
-#### Repo usage
+##### Repo usage
 
 ```bash
+# Update db
+$ sudo apt -y update
+
 # Upgrade packages
 $ sudo apt -y upgrade
 
 # Upgrade distribution
 $ sudo apt -y dist-upgrade
+
+# Search package
+$ sudo apt-cache search <pattern>
+$ sudo apt-cache search screen
+
+# Install package
+$ sudo apt install <pattern>
+$ sudo apt install screen
+
+# Install simulation
+$ sudo apt install -s <pattern>
+# Fix-broken
+$ sudo apt install -f <pattern>
+
+# Delete package
+$ apt remove <package>
+# Delete package and dependencies
+$ apt autoremove <package>
+$ apt autoclean <package>
 ```
+
+#### snappy
+
+##### Snap package usage
+
+```bash
+# Find snap package
+$ snap find <pattern>
+$ snap find screen
+# Install snap package
+$ snap install <pattern>
+$ snap install screen
+# List snap package
+$ snap list
+# Update snap images
+$ snap refresh <pattern>
+# Remove snap package
+$ snap remove <pattern>
+```
+
+
