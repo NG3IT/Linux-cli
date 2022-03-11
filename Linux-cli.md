@@ -408,4 +408,6 @@ $ snap refresh <pattern>
 $ snap remove <pattern>
 ```
 
+#### Install from sources
 
+##### 
