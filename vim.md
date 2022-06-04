@@ -5,6 +5,7 @@
 ## Mode 
 
 i -> insert mode
+
 esc -> default mode
 
 <br> 
@@ -14,7 +15,9 @@ esc -> default mode
 ## Save/Quit
 
 :w -> save
+
 :wq -> save and quit
+
 :q! -> quit without save
 
 <br>
@@ -24,9 +27,13 @@ esc -> default mode
 ## Navigation
 
 gg -> go to the top
+
 G -> go to the end
+
 / -> search pattern
+
 :set number -> print number lines
+
 :<num_line> -> go to number line
 
 <br>
@@ -36,7 +43,9 @@ G -> go to the end
 ## Copy/Paste
 
 yy -> copy line
+
 :<start_line>,<end_line>y -> copy specific lines
+
 p -> paste
 
 <br>
@@ -54,4 +63,5 @@ dd -> delete line
 # Misc
 
 :undo -> remove last operations
+
 :redo -> replay last operations
