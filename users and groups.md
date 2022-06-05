@@ -38,6 +38,8 @@ $ sudo useradd testuser
 $ cat /etc/default/useradd
 ```
 
+<br>
+
 ---
 
 ## Groups
